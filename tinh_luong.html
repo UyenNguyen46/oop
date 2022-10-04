@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class staff{
+    salary;
+    workday;
+    role;
+    constructor(salary,workday,role) {
+      this.salary = salary;
+      this.workday = workday;
+      this.role = role;
+    }
+    getsalary(){
+        if (this.workday===26) {
+            switch (this.role) {
+                case 1:
+                    return this.salary * 1.5;
+                case 2:
+                    return this.salary
+                default:
+                    break;
+            }
+        } else {
+            return this.salary/26 * this.salary;
+            }
+        }
+  }
+  let uyen = new staff(10000000,26,1);
+  console.log(uyen.getsalary());
+</script>
+</body>
+</html>
